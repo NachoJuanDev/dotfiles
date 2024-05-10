@@ -19,5 +19,3 @@ export DOTZSH=$HOME/dotfiles/zsh/
 
 # Help
 [[ -e $DOTZSH/help.sh ]] && source $DOTZSH/help.sh
-
-PATH=~/.console-ninja/.bin:$PATH

@@ -21,3 +21,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Docker
 export PATH=$PATH:$HOME/.docker/bin
+
+# VSCode - Console Ninja
+PATH=~/.console-ninja/.bin:$PATH
