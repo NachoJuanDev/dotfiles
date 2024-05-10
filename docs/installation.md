@@ -1,5 +1,16 @@
 # Instalattion
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Brew](#brew)
+- [zsh](#zsh)
+- [Stow](#stow)
+- [Oh My Zsh](#oh-my-zsh)
+- [Starship](#starship)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## Brew
 
 > MacOS
@@ -20,7 +31,6 @@ brew install zsh
 
 # Ubuntu/Debian
 sudo apt install zsh
-
 
 # Configure zsh as default shell
 chsh -s $(which zsh)
