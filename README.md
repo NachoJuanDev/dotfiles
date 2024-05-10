@@ -1,5 +1,7 @@
 # Nacho Juan's Dotfiles
 
+![](assets/tree.png)
+
 Dotfiles managed by [GNU Stow](https://www.gnu.org/software/stow/).
 
 ## Quick Start

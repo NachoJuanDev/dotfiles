@@ -6,6 +6,7 @@
 .gitignore
 README.md
 docs/
+assets/
 
 # zsh files
 zsh/
