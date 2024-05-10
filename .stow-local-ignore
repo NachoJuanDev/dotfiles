@@ -1,0 +1,14 @@
+# Mac
+.DS_Store
+
+# Git
+.git
+.gitignore
+README.md
+docs/
+
+# zsh files
+zsh/
+
+# alacritty
+dracula.toml
