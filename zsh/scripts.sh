@@ -12,7 +12,7 @@ function rZsh {
 	source ~/.zshrc
 }
 
-#@dtemp#:Create a random folder temp and move it
+#@dtemp#:Create a random folder temp and move to it
 function dtemp {
 	cd $(mktemp -d)
 }
