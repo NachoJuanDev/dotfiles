@@ -1,37 +1,47 @@
+# https://starship.rs/config/
+
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# localip and time to right of promp
 format = """$all$fill$localip$time$line_break$shell$character"""
 
 # Inserts a blank line between shell prompts
 add_newline = true
 
+# Fills any extra space on the line with a symbol
 [fill]
 symbol = ' '
 
-# Replace the "❯" symbol in the prompt with "➜"
-[character] # The name of the module we are configuring is "character"
-success_symbol = "[➜](bold green)" # The "success_symbol" segment is being set to "➜" with the color "bold green"
+[character]
+success_symbol = "[➜](bold green)"
+error_symbol = "[✗](bold red)"
 
+# Only show current folder and parent
 [directory]
 truncation_length = 2
-
-[nodejs]
-format = '[$symbol($version )]($style)'
-
-[python]
-format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
-
-[ruby]
-format = '[$symbol($version )]($style)'
-detect_variables = []
+# by default, truncate to the root of the git repo that you're currently in 
 
 [time]
 disabled = false
 format = '[$time]($style) '
 time_format = '%R'
 
+# Active localip in ssh connections
 [localip]
+disabled = false
 ssh_only = false
 format = '[$localipv4](bold green) '
-disabled = false
+
+# Remove via string
+[nodejs]
+format = '[$symbol($version )]($style)'
+
+# Remove via string
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
+# Remove via string
+[ruby]
+format = '[$symbol($version )]($style)'
+detect_variables = []
