@@ -5,11 +5,11 @@
 .git
 .gitignore
 README.md
-docs/
-assets/
+docs
+assets
 
 # zsh files
-zsh/
+zsh
 
 # alacritty
 dracula.toml
