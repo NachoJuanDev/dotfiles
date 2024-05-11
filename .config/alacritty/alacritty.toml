@@ -16,6 +16,9 @@ option_as_alt = "OnlyLeft" # tmux - meta key
 x = 25
 y = 20
 
+[cursor]
+style = { shape = "Beam" }
+
 [font]
 size = 18.0
 
