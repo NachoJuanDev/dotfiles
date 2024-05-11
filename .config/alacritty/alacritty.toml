@@ -1,4 +1,7 @@
-import = ["~/dotfiles/.config/alacritty/dracula.toml"]
+import = [
+  "~/dotfiles/.config/alacritty/dracula.toml",
+  "~/dotfiles/.config/alacritty/keybindings.toml",
+]
 
 [env]
 TERM = "xterm-256color"
