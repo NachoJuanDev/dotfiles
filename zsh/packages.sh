@@ -12,6 +12,13 @@ eval "$(rbenv init - zsh)"
 # node - fnm
 eval "$(fnm env --use-on-cd)"
 
+# pnpm
+export PNPM_HOME="/Users/nacho/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
 # Android studio
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
