@@ -17,6 +17,9 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 setopt APPEND_HISTORY            # append to history file
 setopt HIST_NO_STORE             # Don't store history commands
 
+# Brew
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 #> Sources <#
 
 # Oh My Zsh
