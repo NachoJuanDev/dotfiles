@@ -34,5 +34,8 @@ FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 # Scripts
 [[ -e $DOTZSH/scripts.sh ]] && source $DOTZSH/scripts.sh
 
+# Pulso scripts
+[[ -e $DOTZSH/pulso_scripts.sh ]] && source $DOTZSH/pulso_scripts.sh
+
 # Help
 [[ -e $DOTZSH/help.sh ]] && source $DOTZSH/help.sh
