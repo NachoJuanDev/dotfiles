@@ -9,6 +9,17 @@ eval "$(starship init zsh)"
 # ruby - rben
 eval "$(rbenv init - zsh)"
 
+# rails
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+export DISABLE_SPRING=true
+
+# libpq - brew
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# google cloud sdk
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+
 # node - fnm
 eval "$(fnm env --use-on-cd)"
 
