@@ -46,3 +46,6 @@ format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 format = '[$symbol($version )]($style)'
 symbol="\ueb48 "
 detect_variables = []
+
+[gcloud]
+disabled=true
