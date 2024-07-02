@@ -17,9 +17,10 @@ setopt HIST_VERIFY               # Do not execute immediately upon history expan
 setopt APPEND_HISTORY            # append to history file
 setopt HIST_NO_STORE             # Don't store history commands
 
-# Brew
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
+# Brew  Mac
+if [[ "$(uname)" == "Darwin" ]]; then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi 
 #> Sources <#
 
 # Oh My Zsh
@@ -29,6 +30,15 @@ FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 [[ -e $DOTZSH/aliases.sh ]] && source $DOTZSH/aliases.sh
 
 # Packages
+
+if [[ "$(uname)" == "Darwin" ]]; then
+    [[ -e $DOTZSH/packages.mac.sh ]] && source $DOTZSH/packages.mac.sh
+elif [[ "$(uname)" == "Linux" ]]; then
+    [[ -e $DOTZSH/packages.linux.sh ]] && source $DOTZSH/packages.linux.sh
+else
+    echo "No estás en un sistema compatible (ni Linux ni macOS)"
+fi
+
 [[ -e $DOTZSH/packages.sh ]] && source $DOTZSH/packages.sh
 
 # Scripts
