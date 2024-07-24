@@ -1,6 +1,8 @@
 #> Basic Config <#
 
 export LANG=es_ES.UTF-8
+export LANGUAGE=es_ES.UTF-8
+export LC_ALL=es_ES.UTF-8
 export DOTZSH=$HOME/dotfiles/zsh/
 
 # History - Reference: https://github.com/rothgar/mastering-zsh/blob/master/docs/config/history.md
