@@ -10,6 +10,3 @@ eval "$(rbenv init - zsh)"
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-# VSCode - Console Ninja
-PATH=~/.console-ninja/.bin:$PATH
