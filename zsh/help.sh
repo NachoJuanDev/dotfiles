@@ -14,6 +14,13 @@ function help {
       grep -oE '#@.+' |
       awk '{printf "  %-15s : %-15s\n", $2, $3}' FS='#@|#:'
   fi
+
+  if [ -f $DOTZSH/pulso_scripts.sh ]; then
+    echo -e "\n[*] Pulso Scripts"
+    cat $DOTZSH/pulso_scripts.sh |
+      grep -oE '#@.+' |
+      awk '{printf "  %-15s : %-15s\n", $2, $3}' FS='#@|#:'
+  fi
 }
 
 function help-tmux {
@@ -24,6 +31,7 @@ function help-tmux {
   echo -e "    tmux a [-t <name session>]"
   echo -e "    tmux kill-session -t <name session>"
   echo -e "    <prefix>, d : detach"
+  echo -e "    <prefix>, $ : rename session"
   echo -e "    <prefix>, 0-9 : select session"
   echo -e "    <prefix>, w : list sessions (and windows)"
   
@@ -47,6 +55,7 @@ function help-tmux {
   echo -e "  * Windows:"
   echo -e "    <prefix>, c : new window"
   echo -e "    <prefix>, , : rename window"
+  echo -e "    <prefix>, . : move window"
   echo -e "    <prefix>, n : next window"
   echo -e "    <prefix>, p : previous window"
   echo -e "    <prefix>, & : close window"
