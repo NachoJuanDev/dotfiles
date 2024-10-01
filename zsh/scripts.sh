@@ -17,8 +17,12 @@ function dtemp {
 	cd $(mktemp -d)
 }
 
-#@fh#:Interactive history search
+# @fh#:Interactive history search
 function fh() {
-	# Reference: https://github.com/rothgar/mastering-zsh/blob/master/docs/config/history.md
-	eval $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
+    local selected_command
+    selected_command=$( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
+    
+    if [[ -n $selected_command ]]; then
+        print -z "$selected_command"
+    fi
 }
