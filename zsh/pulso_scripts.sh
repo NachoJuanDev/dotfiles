@@ -28,19 +28,24 @@ function tmux-pulso() {
 
 	# pulso
 	tmux new-window -n pulso -c $pulso
-	sleep 0.1s
+	tmux split-window -h -c $pulso
+	tmux select-pane -t $session:pulso.0
+
 
 	# pulso-app
 	tmux new-window -n pulso-app -c $pulso_app
 	tmux split-window -h -c $pulso_app
 	tmux split-window -v -c $pulso_app
 	tmux select-pane -t $session:pulso-app.0
+	tmux split-window -v -c $pulso_app
+	tmux select-pane -t $session:pulso-app.0
+
 
 	# Comandos para pulso-app
 	if $run_all; then
 		tmux send-keys -t $session:pulso-app.0 'rails c' C-m
-		tmux send-keys -t $session:pulso-app.1 'rails s -b 192.168.101.1 -p 3000' C-m
-		tmux send-keys -t $session:pulso-app.2 './bin/webpacker-dev-server' C-m
+		tmux send-keys -t $session:pulso-app.2 'rails s -b 192.168.101.1 -p 3000' C-m
+		tmux send-keys -t $session:pulso-app.3 './bin/webpacker-dev-server' C-m
 	fi
 
 	# docker
