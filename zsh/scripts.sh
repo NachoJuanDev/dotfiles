@@ -17,7 +17,7 @@ function dtemp {
 	cd $(mktemp -d)
 }
 
-# @fh#:Interactive history search
+#@fh#:Interactive history search
 function fh() {
     local selected_command
     selected_command=$( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac | sed 's/ *[0-9]* *//')
