@@ -6,8 +6,8 @@ function pulso_cp_sa() {
   gsutil -m cp -r "gs://survey-answers.radarescolar.cl/${type}/${rbd}/${survey_application_id}" "gs://survey-answers/${type}/${rbd}/${survey_application_id}"
 }
 
-#@pulso_cp_sa_vinapa#: pulso_cp_sa type rbd s_a_id
-function pulso_cp_sa_vinapa() {
+#@pulso_cp_sa_vinapados#: pulso_cp_sa_vinapados type rbd s_a_id
+function pulso_cp_sa_vinapados() {
   local type="$1"
   local rbd="$2"
   local survey_application_id="$3"
