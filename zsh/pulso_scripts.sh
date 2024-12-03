@@ -115,12 +115,10 @@ function hotfix_pr() {
   local reviewer="$1"
   gh pr create -B master -l hotfix,production -a "$reviewer" --reviewer "$reviewer"
   gh pr create -B release -l hotfix,release -a "$reviewer" --reviewer "$reviewer"
-  # gh pr create -B development -l hotfix,development -a "$reviewer" --reviewer "$reviewer"
 }
 
 #@warmfix_pr#: warmfix_pr <reviewer>
 function warmfix_pr() {
   local reviewer="$1"
   gh pr create -B release -l warmfix,release -a "$reviewer" --reviewer "$reviewer"
-  # gh pr create -B development -l warmfix,development -a "$reviewer" --reviewer "$reviewer"
 }
